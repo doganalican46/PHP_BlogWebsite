@@ -1,4 +1,4 @@
-<?php $title = "Profile"; ?>
+<?php $customTitle = "Profile Page"; ?>
 <?php include "pages/_header.php" ?>
 <?php include "pages/_navbar.php" ?>
 
