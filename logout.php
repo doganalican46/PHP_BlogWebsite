@@ -1,13 +1,12 @@
-<?php $customTitle = "Logout"; ?>
-<?php include "pages/_header.php" ?>
-<?php include "pages/_navbar.php" ?>
+<?php
+session_start();
 
-<div class="container mt-5">
-    <div class="row">
-        <div class="col">
-            
-        </div>
-    </div>
-</div>
-
-<?php include "pages/_footer.php" ?>
+if (isset($_SESSION['email'])) {
+    session_unset();
+    session_destroy();
+    header("Location: login.php");
+    exit(); 
+} else {
+    header("Location: login.php");
+    exit();
+}

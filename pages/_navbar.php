@@ -8,14 +8,19 @@
                 <a class="nav-link" href="discover.php">Discover</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="profile.php">Profile</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="login.php">Log In</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="logout.php">Log Out</a>
-            </li>
+
+            <?php if ($_SESSION["auth"] = true) : ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.php">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.php">Log Out</a>
+                </li>
+            <?php endif; ?>
+
+
         </ul>
     </div>
 </nav>
