@@ -6,6 +6,10 @@
     <div class="row">
         <div class="col">
 
+        <h1>Discorver Page</h1>
+
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed officia explicabo repellat nam exercitationem laborum beatae ab eum nobis quos.
+
         </div>
     </div>
 </div>

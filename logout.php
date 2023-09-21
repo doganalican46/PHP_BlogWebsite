@@ -1,12 +1,11 @@
 <?php
 session_start();
-
-if (isset($_SESSION['email'])) {
+if (isset($_SESSION['auth']) && $_SESSION['auth'] === true) {
     session_unset();
     session_destroy();
-    header("Location: login.php");
-    exit(); 
+    header("Location: discover.php");
+    exit();
 } else {
-    header("Location: login.php");
+    header("Location: discover.php");
     exit();
 }

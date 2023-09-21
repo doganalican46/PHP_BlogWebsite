@@ -1,7 +1,13 @@
+<?php $customTitle = "Login Page"; ?>
 <?php include "database/db_connection.php"; ?>
-<?php
-session_start();
+<?php include "pages/_header.php" ?>
+<?php include "pages/_navbar.php" ?>
 
+<?php
+if (isset($_SESSION['auth']) && $_SESSION['auth'] === true) {
+    header("Location: index.php"); 
+    exit();
+}
 if (isset($_POST["loginbtn"])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -14,12 +20,15 @@ if (isset($_POST["loginbtn"])) {
             $user = mysqli_fetch_assoc($result);
 
             if ($user['password'] == $password) {
-                $_SESSION["message"] = $user["username"]." Successfully login...";
-                $_SESSION["auth"]=$user["username"];
+                $_SESSION['auth'] = true;
+                $_SESSION['auth_user'] = $user['fullname'];
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['email'] = $user['email'];
+                $_SESSION['image'] = $user['image'];
                 header("Location: index.php");
-                exit(); 
+                exit();
             } else {
-                echo "Incorrect password.";
+                echo "Wrong Password!";
             }
         } else {
             echo "No user found with this email.";
@@ -29,12 +38,6 @@ if (isset($_POST["loginbtn"])) {
     }
 }
 ?>
-
-
-
-<?php $customTitle = "Login Page"; ?>
-<?php include "pages/_header.php" ?>
-<?php include "pages/_navbar.php" ?>
 
 <div class="container mt-5">
     <div class="row justify-content-center">

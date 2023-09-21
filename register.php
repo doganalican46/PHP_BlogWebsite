@@ -1,9 +1,8 @@
 <?php include "database/db_connection.php"; ?>
 <?php
-session_start();
+
 
 if (isset($_POST["registerbtn"])) {
-    // Get user input
     $fullname = $_POST["fullname"];
     $email = $_POST["email"];
     $password = $_POST["password"];

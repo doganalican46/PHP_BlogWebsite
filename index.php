@@ -1,18 +1,19 @@
-<?php
-session_start();
-if (isset($_SESSION["message"])) {
-    echo "<div class='alert alert-danger mb-0 text-center'> " . $_SESSION["message"] . "</div>";
-    unset($_SESSION["message"]);
-}
-
-?>
-
 <?php include "pages/_header.php" ?>
 <?php include "pages/_navbar.php" ?>
 
+
+
 <div class="container mt-5">
+    <?php
+    if (isset($_SESSION['auth']) && $_SESSION['auth'] === true) {
+        $fullname = $_SESSION['auth_user'];
+        echo '<h1>Hello ' . $fullname . ',</h1>';
+        echo '<h4>Here your homepage</h4>';
+    }
+    ?>
+
     <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-8 mt-5">
             <h2>TITLE HEADING</h2>
             <h5>Title description, Dec 7, 2020</h5>
             <div class="fakeimg">Fake Image</div>

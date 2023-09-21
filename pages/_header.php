@@ -1,10 +1,11 @@
-<?php $title;
+<?php 
+session_start();
+$title;
 $pageTitle = "Homepage";
 if (isset($customTitle)) {
     $pageTitle = $customTitle;
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
