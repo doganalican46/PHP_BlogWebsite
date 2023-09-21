@@ -5,9 +5,10 @@
 
 <?php
 if (isset($_SESSION['auth']) && $_SESSION['auth'] === true) {
-    header("Location: index.php"); 
+    header("Location: index.php");
     exit();
 }
+
 if (isset($_POST["loginbtn"])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -25,7 +26,18 @@ if (isset($_POST["loginbtn"])) {
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['email'] = $user['email'];
                 $_SESSION['image'] = $user['image'];
-                header("Location: index.php");
+                $_SESSION['user_role'] = $user['user_role'];
+
+                if ($user['user_role'] == 0) {
+                    // User is not an admin, redirect to index.php
+                    header("Location: index.php");
+                    exit();
+                } elseif ($user['user_role'] == 1) {
+                    // User is an admin, redirect to admin/index.php
+                    header("Location: admin/index.php");
+                    exit();
+                }
+
                 exit();
             } else {
                 echo "Wrong Password!";
@@ -37,6 +49,7 @@ if (isset($_POST["loginbtn"])) {
         echo "Query failed: " . mysqli_error($connection);
     }
 }
+
 ?>
 
 <div class="container mt-5">
