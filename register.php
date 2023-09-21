@@ -44,15 +44,15 @@ if (isset($_POST["registerbtn"])) {
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <form action="" method="post">
+            <form action="register.php" method="post"> 
                 <h2 class="mb-4">Register Form</h2>
                 <div class="form-group mb-2">
                     <label for="fullname">Fullname:</label>
-                    <input type="text" class="form-control" name="fullname" placeholder="Enter fullname">
+                    <input type="text" class="form-control" name="fullname" placeholder="Enter fullname" value="<?php echo isset($fullname) ? htmlspecialchars($fullname) : ''; ?>">
                 </div>
                 <div class="form-group mb-2">
                     <label for="email">E-Mail:</label>
-                    <input type="email" class="form-control" name="email" placeholder="Enter e-mail">
+                    <input type="email" class="form-control" name="email" placeholder="Enter e-mail" value="<?php echo isset($email) ? htmlspecialchars($email) : ''; ?>">
                 </div>
                 <div class="form-group mb-2">
                     <label for="password">Password:</label>
@@ -68,5 +68,6 @@ if (isset($_POST["registerbtn"])) {
         </div>
     </div>
 </div>
+
 
 <?php include "pages/_footer.php" ?>

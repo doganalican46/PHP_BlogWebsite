@@ -30,6 +30,9 @@ $current_url = $_SERVER['REQUEST_URI'];
                 <li class="nav-item">
                     <a class="nav-link<?php echo (strpos($current_url, 'login.php') !== false) ? ' active' : ''; ?>" href="login.php">Log In</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link<?php echo (strpos($current_url, 'register.php') !== false) ? ' active' : ''; ?>" href="register.php">Register</a>
+                </li>
 
             <?php endif; ?>
 

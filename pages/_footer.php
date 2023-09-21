@@ -1,4 +1,4 @@
-<footer class="footer mt-5 p-4 bg-dark text-white text-center fixed-bottom">
+<footer class="footer bg-dark text-white text-center fixed-bottom">
     <p>This Website created by <a href="https://www.doganalican46.dev/" target="_blank">Ali Can Doğan</a></p>
 </footer>
 

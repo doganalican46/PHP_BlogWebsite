@@ -5,6 +5,10 @@
 
 <div class="container mt-5">
     <?php
+    if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
+        header("Location: login.php");
+        exit();
+    }
     if (isset($_SESSION['auth']) && $_SESSION['auth'] === true) {
         $fullname = $_SESSION['auth_user'];
         echo '<h1>Hello ' . $fullname . ',</h1>';
