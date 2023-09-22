@@ -19,6 +19,9 @@ $current_url = $_SERVER['REQUEST_URI'];
                     <a class="nav-link<?php echo (strpos($current_url, 'users_setting.php') !== false) ? ' active' : ''; ?>" href="users_setting.php">Users Setting</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link<?php echo (strpos($current_url, 'posts.php') !== false) ? ' active' : ''; ?>" href="posts.php">Posts</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link<?php echo (strpos($current_url, 'profile.php') !== false) ? ' active' : ''; ?>" href="profile.php"><?php echo $fullname; ?></a>
                 </li>
                 <li class="nav-item">

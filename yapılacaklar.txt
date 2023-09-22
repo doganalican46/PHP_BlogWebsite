@@ -1,0 +1,4 @@
+* profil güncellemelerinden sonra $_SESSION larda güncellenmeli
+* user list tablosu datatable olmalı
+* database de posts adından bir tablo oluşucak
+* 

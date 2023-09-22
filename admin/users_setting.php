@@ -1,4 +1,4 @@
-<?php $customTitle = "Page Name"; ?>
+<?php $customTitle = "Users Setting"; ?>
 <?php include "pages/_header.php" ?>
 <?php include "pages/_navbar.php" ?>
 <?php include "../database/db_connection.php"; ?>
@@ -40,7 +40,9 @@ $result = mysqli_query($connection, $query);
         <div class="col">
             <div class="card">
                 <div class="card-header">
-                    <h1>User List <button class="btn btn-primary float-end">Add New User</button></h1>
+                    <form action="addnewuser.php" method="post">
+                        <h1>User List <button class="btn btn-primary float-end" type="submit">Add New User</button></h1>
+                    </form>
                 </div>
                 <div class="card-body">
                     <table class="table table-hover">

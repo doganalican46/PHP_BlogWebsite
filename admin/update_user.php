@@ -8,9 +8,9 @@
 
 if (isset($_POST["update_userbtn"])) {
     $user_id = $_POST["user_id"];
-    $fullname = $_POST["fullname"];
-    $email = $_POST["email"];
-    $user_role = $_POST["user_role"];
+    $newfullname = $_POST["fullname"];
+    $newemail = $_POST["email"];
+    $newuser_role = $_POST["user_role"];
 
     $updateQuery = "UPDATE users SET fullname = ?, email = ?, user_role = ? WHERE id = ?";
     $stmt = mysqli_prepare($connection, $updateQuery);
@@ -18,6 +18,9 @@ if (isset($_POST["update_userbtn"])) {
     if ($stmt) {
         mysqli_stmt_bind_param($stmt, "sssi", $fullname, $email, $user_role, $user_id);
         if (mysqli_stmt_execute($stmt)) {
+            $_SESSION['auth_user'] = $newfullname;
+            $_SESSION['email'] = $newemail;
+            $_SESSION['user_role'] = $newuser_role;
             header("Location: users_setting.php");
             exit();
         } else {
@@ -30,12 +33,6 @@ if (isset($_POST["update_userbtn"])) {
     }
 }
 ?>
-
-
-
-
-
-
 
 
 <div class="container mt-5">
