@@ -14,6 +14,7 @@ $current_url = $_SERVER['REQUEST_URI'];
             <li class="nav-item">
                 <a class="nav-link<?php echo (strpos($current_url, 'discover.php') !== false) ? ' active' : ''; ?>" href="discover.php">Discover</a>
             </li>
+            &nbsp;&nbsp;&nbsp;&nbsp;
 
             <?php if (isset($_SESSION['auth']) && $_SESSION['auth'] === true) : ?>
                 <li class="nav-item">
