@@ -3,6 +3,10 @@
 <?php include "pages/_navbar.php" ?>
 <?php include "../database/db_connection.php"; ?>
 
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 <?php
 if (isset($_POST["delete_userbtn"])) {
@@ -52,42 +56,49 @@ $result = mysqli_query($connection, $query);
                     </form>
                 </div>
                 <div class="card-body">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Role</th>
-                                <th>Process</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            while ($user = mysqli_fetch_assoc($result)) {
-                            ?>
-                                <tr>
-                                    <td><?php echo $user['id']; ?></td>
-                                    <td><?php echo $user['fullname']; ?></td>
-                                    <td><?php echo $user['email']; ?></td>
-                                    <td><?php echo $user['user_role']; ?></td>
-                                    <td>
-                                        <form action="" method="post" onsubmit="return confirmDelete();">
-                                            <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
-                                            <button type="submit" name="delete_userbtn" class="btn btn-danger mb-1">Delete</button>
-                                        </form>
+                    <div class="table-responsive">
 
-                                        <form action="update_user.php" method="post">
-                                            <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
-                                            <button class="btn btn-primary" type="submit" name="edit_userbtn">Edit</button>
-                                        </form>
-                                    </td>
+                        <table class="table table-hover" id="mytable">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Photo</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Process</th>
                                 </tr>
-                            <?php
-                            }
-                            ?>
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                <?php
+                                while ($user = mysqli_fetch_assoc($result)) {
+                                ?>
+                                    <tr>
+                                        <td><?php echo $user['id']; ?></td>
+                                        <td><img src="<?php echo $user['image']; ?>" alt="User Image" style="width: 75px; height: 75px;"></td>
+                                        <td><?php echo $user['fullname']; ?></td>
+                                        <td><?php echo $user['email']; ?></td>
+                                        <td><?php echo $user['user_role']; ?></td>
+                                        <td>
+                                            <form action="" method="post" onsubmit="return confirmDelete();">
+                                                <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
+                                                <button type="submit" name="delete_userbtn" class="btn btn-danger mb-1">Delete</button>
+                                            </form>
+
+                                            <form action="update_user.php" method="post">
+                                                <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
+                                                <button class="btn btn-primary" type="submit" name="edit_userbtn">Edit</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                <?php
+                                }
+                                ?>
+                            </tbody>
+
+
+                        </table>
+                    </div>
                 </div>
                 <div class="card-footer">
                     <!-- <button class="btn btn-primary">Print</button> -->
@@ -101,14 +112,13 @@ $result = mysqli_query($connection, $query);
     function confirmDelete() {
         return confirm("Are you sure you want to delete this account?");
     }
+
+    jQuery(document).ready(function() {
+        jQuery('#mytable').DataTable();
+    });
 </script>
 
 
-
-
-
-
-
-
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
 
 <?php include "pages/_footer.php" ?>
