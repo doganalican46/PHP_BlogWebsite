@@ -11,7 +11,8 @@ ________________________________________________________________________________
 📫 How to reach me **doganalican46@hotmail.com**
 ___________________________________________________________________________________________________________________
 ## Project Scope and Purpose:
-The main purpose of a blogwebsite is to determine the location or direction of a target. Basically, tracking system would maintain contact and constantly update the location. I created a basic web-site for this system.
+My main goal is to set up a website with PHP and consolidate crud operations.
+
 
 ## Programming Languages:
   
