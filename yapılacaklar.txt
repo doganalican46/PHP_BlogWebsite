@@ -1,7 +1,11 @@
 * profil güncellemelerinden sonra $_SESSION larda güncellenmeli
-* user list tablosu datatable olmalı
-* database de posts adından bir tablo oluşucak
-* 
+
+
+* admin posts sayfasındaki postlar datatable hale getirilicek:
+    -detaylı gör ve onayla adında 2 buton olacak:
+    -detaylı göre basınca post açılacak:
+        **post görüntülenecek ve onayla butonu olacak veya geri git butonu
+    -onaylaya basınca onaylanacak ve aynı sayfada kalacak
 
 
 
