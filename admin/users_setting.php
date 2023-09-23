@@ -42,7 +42,7 @@ $result = mysqli_query($connection, $query);
         box-sizing: border-box;
     }
 </style>
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
     <div class="row">
         <div class="col">
             <div class="card">

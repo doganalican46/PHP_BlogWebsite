@@ -96,7 +96,7 @@ if (isset($_POST["delete_accountbtn"])) {
 
 ?>
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
     <div class="row">
         <div class="col-sm-4 float-start">
             <div class="image">

@@ -44,7 +44,7 @@
                 <?php
 
                 if (!empty($post_image)) {
-                    echo "<div class='post-image'><img src='$post_image' alt='Post Image'></div>";
+                    echo "<div class='post-image'><img src='$post_image' alt='Post Image' class='img-fluid'></div>";
                 }
                 ?>
                 <hr>

@@ -35,7 +35,7 @@ if (isset($_POST["update_userbtn"])) {
 ?>
 
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
     <div class="row">
         <div class="col">
             <?php

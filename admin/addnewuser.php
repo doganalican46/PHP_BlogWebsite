@@ -40,8 +40,7 @@ if (isset($_POST["add_newuserbtn"])) {
 <?php $customTitle = "Add new user "; ?>
 <?php include "pages/_header.php" ?>
 <?php include "pages/_navbar.php" ?>
-
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card">

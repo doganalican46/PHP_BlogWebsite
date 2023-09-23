@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 $title;
 $pageTitle = "Homepage";
@@ -8,6 +8,7 @@ if (isset($customTitle)) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 
 <head>
     <meta charset="UTF-8">
