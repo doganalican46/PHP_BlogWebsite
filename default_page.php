@@ -2,7 +2,7 @@
 <?php include "pages/_header.php" ?>
 <?php include "pages/_navbar.php" ?>
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
     <div class="row">
         <div class="col">
 

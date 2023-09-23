@@ -3,7 +3,7 @@
 <?php include "database/db_connection.php" ?>
 
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
     <?php
     if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
         header("Location: login.php");
@@ -37,7 +37,7 @@
             <div class="card-header">
                 <h3><?php echo $post_title; ?></h3>
                 <hr>
-                <h6><?php echo $post_owner_name; ?></h6>
+                <h6>Post owner: <?php echo $post_owner_name; ?></h6>
                 <label class="text-muted">Created at <?php echo $created_at; ?></label>
             </div>
             <div class="card-body">

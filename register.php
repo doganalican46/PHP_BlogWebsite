@@ -41,10 +41,10 @@ if (isset($_POST["registerbtn"])) {
 <?php include "pages/_header.php" ?>
 <?php include "pages/_navbar.php" ?>
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <form action="register.php" method="post"> 
+            <form action="register.php" method="post">
                 <h2 class="mb-4">Register Form</h2>
                 <div class="form-group mb-2">
                     <label for="fullname">Fullname:</label>
