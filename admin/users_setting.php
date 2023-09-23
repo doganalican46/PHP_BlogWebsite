@@ -3,6 +3,7 @@
 <?php include "pages/_navbar.php" ?>
 <?php include "../database/db_connection.php"; ?>
 
+
 <?php
 if (isset($_POST["delete_userbtn"])) {
     $user_id = $_POST["user_id"];
@@ -34,7 +35,13 @@ if (isset($_POST["delete_userbtn"])) {
 $query = "SELECT * FROM users";
 $result = mysqli_query($connection, $query);
 ?>
-
+<style>
+    tfoot input {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+    }
+</style>
 <div class="container mt-5">
     <div class="row">
         <div class="col">
