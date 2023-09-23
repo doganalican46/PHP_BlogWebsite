@@ -2,3 +2,6 @@
 * user list tablosu datatable olmalı
 * database de posts adından bir tablo oluşucak
 * 
+
+
+

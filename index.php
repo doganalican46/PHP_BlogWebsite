@@ -1,6 +1,6 @@
 <?php include "pages/_header.php" ?>
 <?php include "pages/_navbar.php" ?>
-
+<?php include "database/db_connection.php" ?>
 
 
 <div class="container mt-5">
@@ -12,19 +12,54 @@
     if (isset($_SESSION['auth']) && $_SESSION['auth'] === true) {
         $fullname = $_SESSION['auth_user'];
         echo '<h1>Hello ' . $fullname . ',</h1>';
-        echo '<h4>Here your homepage</h4>';
     }
     ?>
 
-    <div class="row">
-        <div class="col-sm-8 mt-5">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Dec 7, 2020</h5>
-            <div class="fakeimg">Fake Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <form action="create_post.php" method="post">
+        <button class="btn btn-primary mt-2"> Create a post </button>
+    </form>
+
+
+    <?php
+    $post_owner = $_SESSION['user_id'];
+    $query = "SELECT posts.*, users.fullname AS owner_name FROM posts JOIN users ON posts.post_owner = users.id WHERE post_owner='$post_owner' ORDER BY posts.post_id DESC";
+    $result = mysqli_query($connection, $query);
+
+    while ($row = mysqli_fetch_assoc($result)) {
+        $post_owner_name = $row["owner_name"];
+        $post_title = $row["post_title"];
+        $post_content = $row["post_content"];
+        $post_image = $row["post_image"];
+        $created_at = $row["created_at"];
+    ?>
+
+        <div class="card post-card mt-5">
+            <div class="card-header">
+                <h3><?php echo $post_title; ?></h3>
+                <hr>
+                <h6><?php echo $post_owner_name; ?></h6>
+                <label class="text-muted">Created at <?php echo $created_at; ?></label>
+            </div>
+            <div class="card-body">
+                <?php
+
+                if (!empty($post_image)) {
+                    echo "<div class='post-image'><img src='$post_image' alt='Post Image'></div>";
+                }
+                ?>
+                <hr>
+                <div class="post-content"><?php echo $post_content; ?></div>
+            </div>
+            <div class="card-footer">
+                <i class="fas fa-heart"></i>
+            </div>
         </div>
-    </div>
+
+    <?php }
+    ?>
+
+
+
 </div>
 
 <?php include "pages/_footer.php" ?>
