@@ -13,7 +13,7 @@ $current_url = $_SERVER['REQUEST_URI'];
 
             <?php if (isset($_SESSION['auth']) && $_SESSION['auth'] === true) : ?>
                 <li class="nav-item">
-                    <a class="nav-link<?php echo (strpos($current_url, 'index.php') !== false) ? ' active' : ''; ?>" href="index.php">Homepage</a>
+                    <a class="nav-link<?php echo (strpos($current_url, 'index.php') !== false) ? ' active' : ''; ?>" href="index.php">Statistics</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link<?php echo (strpos($current_url, 'users_setting.php') !== false) ? ' active' : ''; ?>" href="users_setting.php">Users Setting</a>

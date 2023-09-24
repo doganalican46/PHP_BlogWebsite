@@ -29,11 +29,9 @@ if (isset($_POST["loginbtn"])) {
                 $_SESSION['user_role'] = $user['user_role'];
 
                 if ($user['user_role'] == 0) {
-                    // User is not an admin, redirect to index.php
                     header("Location: index.php");
                     exit();
                 } elseif ($user['user_role'] == 1) {
-                    // User is an admin, redirect to admin/index.php
                     header("Location: admin/index.php");
                     exit();
                 }

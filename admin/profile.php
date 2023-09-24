@@ -136,6 +136,19 @@ if (isset($_POST["delete_accountbtn"])) {
                             <label for="profile_image">Profile Image:</label>
                             <input type="file" class="form-control" name="profile_image">
                         </div>
+                        <div class="form-group mb-2">
+                            <label for="password">Old Password:</label>
+                            <input type="password" class="form-control" name="password" placeholder="Enter password">
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label for="password">New Password:</label>
+                            <input type="password" class="form-control" name="password" placeholder="Enter password">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="cpassword">Confirm New Password:</label>
+                            <input type="password" class="form-control" name="cpassword" placeholder="Rewrite password">
+                        </div>
                 </div>
                 <div class="card-footer">
                     <button class="btn btn-primary float-end" type="submit" name="updatebtn">Update</button>

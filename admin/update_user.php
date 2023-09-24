@@ -16,11 +16,8 @@ if (isset($_POST["update_userbtn"])) {
     $stmt = mysqli_prepare($connection, $updateQuery);
 
     if ($stmt) {
-        mysqli_stmt_bind_param($stmt, "sssi", $fullname, $email, $user_role, $user_id);
+        mysqli_stmt_bind_param($stmt, "sssi", $newfullname, $newemail, $newuser_role, $user_id);
         if (mysqli_stmt_execute($stmt)) {
-            $_SESSION['auth_user'] = $newfullname;
-            $_SESSION['email'] = $newemail;
-            $_SESSION['user_role'] = $newuser_role;
             header("Location: users_setting.php");
             exit();
         } else {
@@ -60,8 +57,8 @@ if (isset($_POST["update_userbtn"])) {
                                 <div class="card-header">
                                     <h2>Edit User: <?php echo $user['fullname'] ?> </h2>
                                 </div>
-                                <div class="card-body">
-                                    <form action="" method="post">
+                                <form action="" method="post">
+                                    <div class="card-body">
                                         <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
                                         <div class="form-group">
                                             <label for="fullname">Full Name:</label>
@@ -78,15 +75,16 @@ if (isset($_POST["update_userbtn"])) {
                                         </div>
 
 
-                                </div>
-                                <div class="card-footer">
-                                    <a href="users_setting.php" class="btn btn-danger">Cancel</a>
-                                    <button type="submit" name="update_userbtn" class="btn btn-primary">Update</button>
-                                    </form>
-                                </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="users_setting.php" class="btn btn-danger">Cancel</a>
+                                        <button type="submit" name="update_userbtn" class="btn btn-primary">Update</button>
+                                    </div>
+                                </form>
                             </div>
+        </div>
 
-            <?php
+<?php
                         } else {
                             echo "User not found.";
                         }
@@ -100,20 +98,11 @@ if (isset($_POST["update_userbtn"])) {
                 }
             }
 
-            ?>
+?>
 
-        </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
+</div>
 
 
 <?php include "pages/_footer.php" ?>

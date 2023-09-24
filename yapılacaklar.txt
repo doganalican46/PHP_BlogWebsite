@@ -8,4 +8,10 @@
     -onaylaya basınca onaylanacak ve aynı sayfada kalacak
 
 
+* resimlerin kaydolurkenki isimlerinin düzenlenmesi 
 
+
+* message _SESSION düzenlenmeli
+
+
+* bir SQL sorgusu yapılıcaksa bunu function halinde sürekli yeniden yazmak yerin ihtiyaç anında çağırabiliriz.

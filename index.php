@@ -5,6 +5,8 @@
 
 <div class="container mt-5 mb-5">
     <?php
+    session_regenerate_id();
+
     if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
         header("Location: login.php");
         exit();
@@ -16,9 +18,9 @@
 
     if (isset($_POST["delete_postbtn"])) {
         $post_id = $_POST['post_id'];
-    
+
         $deleteQuery = "DELETE FROM posts WHERE post_id = $post_id";
-    
+
         if (mysqli_query($connection, $deleteQuery)) {
             header("Location: index.php");
             exit();
@@ -52,7 +54,7 @@
         <div class="card post-card mt-5">
             <div class="card-header">
                 <form action="" method="post" onsubmit="return confirm('Are you sure you want to delete your post?');">
-                <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
+                    <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
                     <h3><?php echo $post_title; ?> <button type="submit" name="delete_postbtn" class="btn btn-danger float-end">Delete</button>
                     </h3>
                 </form>
