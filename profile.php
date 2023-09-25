@@ -141,12 +141,22 @@ if (isset($_POST["delete_accountbtn"])) {
                             <input type="password" class="form-control" name="old_password" value="<?php echo $password; ?>" placeholder="Enter old password">
                         </div>
                         <div class="form-group mb-2">
-                            <label for="new_password">New Password:</label>
-                            <input type="password" class="form-control" name="new_password" placeholder="Enter new password">
+                            <label for="password">New Password:</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" name="new_password" id="new_password" placeholder="Enter new password">
+                                <div class="input-group-append">
+                                    <button type="button" class="btn btn-outline-secondary" id="showPassword">Show</button>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group mb-2">
-                            <label for="confirm_password">Confirm New Password:</label>
-                            <input type="password" class="form-control" name="confirm_password" placeholder="Rewrite new password">
+                            <label for="cpassword">Confirm New Password:</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" name="confirm_password" id="confirm_password" placeholder="Rewrite new password">
+                                <div class="input-group-append">
+                                    <button type="button" class="btn btn-outline-secondary" id="showCPassword">Show</button>
+                                </div>
+                            </div>
                         </div>
                 </div>
                 <div class="card-footer">
@@ -162,7 +172,34 @@ if (isset($_POST["delete_accountbtn"])) {
     </div>
 </div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const passwordInput = document.getElementById('new_password');
+        const cpasswordInput = document.getElementById('confirm_password');
+        const showPasswordButton = document.getElementById('showPassword');
+        const showCPasswordButton = document.getElementById('showCPassword');
 
+        showPasswordButton.addEventListener('click', function() {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                showPasswordButton.textContent = 'Hide';
+            } else {
+                passwordInput.type = 'password';
+                showPasswordButton.textContent = 'Show';
+            }
+        });
+
+        showCPasswordButton.addEventListener('click', function() {
+            if (cpasswordInput.type === 'password') {
+                cpasswordInput.type = 'text';
+                showCPasswordButton.textContent = 'Hide';
+            } else {
+                cpasswordInput.type = 'password';
+                showCPasswordButton.textContent = 'Show';
+            }
+        });
+    });
+</script>
 
 
 

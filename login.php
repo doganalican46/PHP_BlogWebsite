@@ -61,7 +61,12 @@ if (isset($_POST["loginbtn"])) {
                 </div>
                 <div class="form-group mb-2">
                     <label for="password">Password:</label>
-                    <input type="password" class="form-control" name="password" placeholder="Enter password">
+                    <div class="input-group">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Enter password">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-outline-secondary" id="showPassword">Show</button>
+                        </div>
+                    </div>
                 </div>
                 <button type="submit" name="loginbtn" class="btn btn-primary btn-block mt-4">Login</button>
                 <p class="mt-3">Don't have an account? <a href="register.php">Register now!</a></p>
@@ -69,5 +74,26 @@ if (isset($_POST["loginbtn"])) {
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const passwordInput = document.getElementById('password');
+
+        const showPasswordButton = document.getElementById('showPassword');
+
+
+        showPasswordButton.addEventListener('click', function() {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                showPasswordButton.textContent = 'Hide';
+            } else {
+                passwordInput.type = 'password';
+                showPasswordButton.textContent = 'Show';
+            }
+        });
+
+
+    });
+</script>
 
 <?php include "pages/_footer.php" ?>

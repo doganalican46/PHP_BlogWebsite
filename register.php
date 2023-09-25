@@ -56,18 +56,58 @@ if (isset($_POST["registerbtn"])) {
                 </div>
                 <div class="form-group mb-2">
                     <label for="password">Password:</label>
-                    <input type="password" class="form-control" name="password" placeholder="Enter password">
+                    <div class="input-group">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Enter password">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-outline-secondary" id="showPassword">Show</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group mb-2">
                     <label for="cpassword">Confirm Password:</label>
-                    <input type="password" class="form-control" name="cpassword" placeholder="Rewrite password">
+                    <div class="input-group">
+                        <input type="password" class="form-control" name="cpassword" id="cpassword" placeholder="Rewrite password">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-outline-secondary" id="showCPassword">Show</button>
+                        </div>
+                    </div>
                 </div>
+
                 <button type="submit" name="registerbtn" class="btn btn-primary btn-block mt-4">Register</button>
                 <p class="mt-3">Already have an account? <a href="login.php">Login now!</a></p>
             </form>
         </div>
     </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const passwordInput = document.getElementById('password');
+        const cpasswordInput = document.getElementById('cpassword');
+        const showPasswordButton = document.getElementById('showPassword');
+        const showCPasswordButton = document.getElementById('showCPassword');
+
+        showPasswordButton.addEventListener('click', function() {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                showPasswordButton.textContent = 'Hide';
+            } else {
+                passwordInput.type = 'password';
+                showPasswordButton.textContent = 'Show';
+            }
+        });
+
+        showCPasswordButton.addEventListener('click', function() {
+            if (cpasswordInput.type === 'password') {
+                cpasswordInput.type = 'text';
+                showCPasswordButton.textContent = 'Hide';
+            } else {
+                cpasswordInput.type = 'password';
+                showCPasswordButton.textContent = 'Show';
+            }
+        });
+    });
+</script>
+
 
 
 <?php include "pages/_footer.php" ?>

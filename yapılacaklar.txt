@@ -1,5 +1,3 @@
-* profil güncellemelerinden sonra $_SESSION larda güncellenmeli
-
 
 * admin posts sayfasındaki postlar datatable hale getirilicek:
     -detaylı gör ve onayla adında 2 buton olacak:

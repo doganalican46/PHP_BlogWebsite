@@ -5,12 +5,7 @@
 <?php include "database/db_connection.php" ?>
 
 <div class="container mt-5 mb-5">
-    <?php
-    if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
-        header("Location: login.php");
-        exit();
-    }
-    ?>
+    
     <?php
     $query = "SELECT posts.*, users.fullname AS owner_name FROM posts JOIN users ON posts.post_owner = users.id ORDER BY posts.post_id DESC";
     $result = mysqli_query($connection, $query);
