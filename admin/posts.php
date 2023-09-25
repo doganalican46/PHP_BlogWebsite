@@ -44,6 +44,7 @@
                 $post_title = $row["post_title"];
                 $post_content = $row["post_content"];
                 $post_image = $row["post_image"];
+                $post_likes=$row["likes"];
                 $created_at = $row["created_at"];
                 $status = $row["status"];
             ?>
@@ -65,7 +66,7 @@
                             <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
 
                             <h6>Post owner: <?php echo $post_owner_name; ?><button type="submit" name="delete_postbtn" class="btn btn-danger float-end">Delete</button></h6>
-                            <label class="text-muted">Created at <?php echo $created_at; ?> 
+                            <label class="text-muted">Created at <?php echo $created_at; ?>
                             </label>
                         </form>
                     </div>
@@ -80,7 +81,8 @@
                         <div class="post-content"><?php echo $post_content; ?></div>
                     </div>
                     <div class="card-footer">
-                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart like-btn"></i>
+                        <span class="like-count"><?php echo $post_likes; ?></span>
                     </div>
                 </div>
             <?php }
