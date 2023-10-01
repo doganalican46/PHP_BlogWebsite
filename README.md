@@ -1,35 +1,32 @@
-# PHP - Blog Website
-___________________________________________________________________________________________________________________
+# PHP Blog Website
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://twitter.com/can_dgn46" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="can_dgn46" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/https://www.linkedin.com/in/doganalican46/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/doganalican46/" height="30" width="40" /></a>
-<a href="https://fb.com/https://www.facebook.com/doganalican46/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="https://www.facebook.com/doganalican46/" height="30" width="40" /></a>
-<a href="https://instagram.com/https://www.instagram.com/can.dgn.46/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="https://www.instagram.com/can.dgn.46/" height="30" width="40" /></a>
+  <a href="https://twitter.com/can_dgn46" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="can_dgn46" height="30" width="40" /></a>
+  <a href="https://linkedin.com/in/doganalican46/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/doganalican46/" height="30" width="40" /></a>
+  <a href="https://www.facebook.com/doganalican46/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="https://www.facebook.com/doganalican46/" height="30" width="40" /></a>
+  <a href="https://www.instagram.com/can.dgn.46/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="https://www.instagram.com/can.dgn.46/" height="30" width="40" /></a>
 </p>
 
-📫 How to reach me **doganalican46@hotmail.com**
-___________________________________________________________________________________________________________________
-## Project Scope and Purpose:
-My main goal is to set up a website with PHP and consolidate crud operations.
+📫 How to reach me: **doganalican46@hotmail.com**
 
+## Project Scope and Purpose
+My main goal is to set up a website with PHP and consolidate CRUD operations.
 
-## Programming Languages:
-  
+## Programming Languages
 ### Front-end:
-*HTML
-*Bootstrap
+- HTML
+- Bootstrap
 
 ### Back-end:
-*PHP
-*JavaScript
+- PHP
+- JavaScript
 
 ### Database:
-*phpMyAdmin
-*XAMPP
+- phpMyAdmin
+- XAMPP
 
-
-## Interfaces:
+## Interfaces
 
 ![admin phone dashboard](https://github.com/doganalican46/PHP_BlogWebsite/assets/76850300/42e5c712-5913-415e-afd9-73aefeb7ed71)
 ![Screenshot 2023-09-30 184057](https://github.com/doganalican46/PHP_BlogWebsite/assets/76850300/92701823-a2ba-4ac4-859c-84521747b89a)
@@ -46,18 +43,21 @@ My main goal is to set up a website with PHP and consolidate crud operations.
 ![admin statistics](https://github.com/doganalican46/PHP_BlogWebsite/assets/76850300/406b501a-53f1-410d-b3ec-a8b0e6e7ae8f)
 
 
-
-
-
-___________________________________________________________________________________________________________________
-
-
+## Connect with me
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://twitter.com/can_dgn46" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="can_dgn46" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/https://www.linkedin.com/in/doganalican46/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/doganalican46/" height="30" width="40" /></a>
-<a href="https://fb.com/https://www.facebook.com/doganalican46/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="https://www.facebook.com/doganalican46/" height="30" width="40" /></a>
-<a href="https://instagram.com/https://www.instagram.com/can.dgn.46/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="https://www.instagram.com/can.dgn.46/" height="30" width="40" /></a>
+  <a href="https://twitter.com/can_dgn46" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="can_dgn46" height="30" width="40" /></a>
+  <a href="https://linkedin.com/in/doganalican46/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/doganalican46/" height="30" width="40" /></a>
+  <a href="https://www.facebook.com/doganalican46/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="https://www.facebook.com/doganalican46/" height="30" width="40" /></a>
+  <a href="https://www.instagram.com/can.dgn.46/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="https://www.instagram.com/can.dgn.46/" height="30" width="40" /></a>
 </p>
 
-📫 How to reach me **doganalican46@hotmail.com**
+📫 How to reach me: **doganalican46@hotmail.com**
+
+
+
+
+
+
+
+
