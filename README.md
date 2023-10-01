@@ -28,7 +28,7 @@ My main goal is to set up a website with PHP and consolidate CRUD operations.
 
 ## Interfaces
 
-![admin phone dashboard](https://github.com/doganalican46/PHP_BlogWebsite/assets/76850300/42e5c712-5913-415e-afd9-73aefeb7ed71){:height="500px" width="500px"}
+![admin phone dashboard](https://github.com/doganalican46/PHP_BlogWebsite/assets/76850300/42e5c712-5913-415e-afd9-73aefeb7ed71)
 ![Screenshot 2023-09-30 184057](https://github.com/doganalican46/PHP_BlogWebsite/assets/76850300/92701823-a2ba-4ac4-859c-84521747b89a)
 ![register](https://github.com/doganalican46/PHP_BlogWebsite/assets/76850300/dddc4d5e-cd7a-42d8-a662-ba430353cc81)
 ![profile](https://github.com/doganalican46/PHP_BlogWebsite/assets/76850300/7a8f8c13-2136-40ab-b441-90d3183710cf)
